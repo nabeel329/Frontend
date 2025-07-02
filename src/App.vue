@@ -1,28 +1,11 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <nav>
+    <router-link to="/posts">Posts</router-link> |
+    <router-link to="/users">Users</router-link> |
+    <router-link to="/comments">Comments</router-link> |
+    <router-link to="/albums">Albums</router-link> |
+    <router-link to="/photos">Photos</router-link> |
+    <router-link to="/todos">Todos</router-link>
+  </nav>
+  <router-view />
 </template>
-
-<script setup>
-// No additional logic needed
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-</style>

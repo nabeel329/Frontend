@@ -1,24 +1,24 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../pages/Home.vue'
-import Users from '../pages/Users.vue'
-import { ROUTES, ROUTE_NAMES } from '../constants/routes.js'
+import { createRouter, createWebHistory } from 'vue-router';
+import Posts from '../Components/Pages/Posts.vue';
+import Users from '../Components/Pages/Users.vue';
+import Comments from '../Components/Pages/Comments.vue';
+import Albums from '../Components/Pages/Albums.vue';
+import Photos from '../Components/Pages/Photos.vue';
+import Todos from '../Components/Pages/Todos.vue';
+
 
 const routes = [
-  {
-    path: ROUTES.HOME,
-    name: ROUTE_NAMES.HOME,
-    component: Home
-  },
-  {
-    path: ROUTES.USERS,
-    name: ROUTE_NAMES.USERS,
-    component: Users
-  }
-]
+  { path: '/posts', component: Posts },
+  { path: '/users', component: Users },
+  { path: '/comments', component: Comments },
+  { path: '/albums', component: Albums },
+  { path: '/photos', component: Photos },
+  { path: '/todos', component: Todos },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 
-export default router 
+export default router;
